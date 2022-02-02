@@ -19,6 +19,9 @@ module.exports = async function(deployer, network, accounts) {
   proxy.upgrade(dogsUpdated.address);
 
   nrOfDogs = await proxyDog.getNumberOfDogs();
-  console.log(nrOfDogs.toNumber());
+  console.log("After update: " + nrOfDogs.toNumber());
+
+  //Set nr of dogs through the New Functional contract
+  await proxyDog.setNumberOfDogs(30);
 
 }
