@@ -5,7 +5,7 @@ import "./Storage.sol";
 contract DogsUpdated is Storage {
 
   modifier onlyOwner() {
-    require[msg.sender == owner];
+    require(msg.sender == owner);
     _;
   }
 
